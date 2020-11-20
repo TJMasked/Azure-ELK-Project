@@ -2,7 +2,7 @@
 
 *The files in this repository were used to configure the network depicted below.*
 
-**_[XCorp's Red Team Network Diagram]_(Images/diagram_filename.png)
+**_[XCorp's Red Team Network Diagram]_**(Images/diagram_filename.png)
 
 The following files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the following files that may be used to install only certain pieces of it, such as Filebeat.
 
@@ -16,7 +16,7 @@ All the files below are located under /etc/ansible.
 
 **_[Install_elk.yml]_
 
-***[Filebeat.yml]
+**[Filebeat.yml]_
 ***[Filebeat-config.yml]
 
 This document contains the following details:
@@ -79,7 +79,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name                   | Publicly Accessible  | Allowed IP Addresses                  |
 |------------------------|----------------------|---------------------------------------|
-| Jump-Box-Provisioner   |      No              | Workstation Public IP via SSH port 22|
+| Jump-Box-Provisioner   |      Yes             | Workstation Public IP via SSH port 22 |
 | Web-1                  |      No              | 10.0.0.4 on SSH  22                   |
 | Web-2                  |      No              | 10.0.0.4 on SSH  22                   |
 | ELKServer              |      No              | Workstation Public IP on  HTTP 80     | 
@@ -87,12 +87,15 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- **_What is the main advantage of automating configuration with Ansible?_**
+- _Ansible ensures the same configuration (typically in the form of text files written in YAML) is run across one to many servers within minutes._
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- **_In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._**
+- ...Modify /etc/ansible/hosts file to include the ELK server name, IP address and the python interpreter.  
+- ...Install Docker and associated python module
+- ...Use Command and sysctl Module to increase virtual memory and ensure it is mapped to a max value
+- ...Download image (sebp/elk:761) and launch a docker elk container.  
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
