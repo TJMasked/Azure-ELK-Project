@@ -2,16 +2,20 @@
 
 *The files in this repository were used to configure the network depicted below.*
 
-***[XCorp's Red Team Network Diagram](Images/diagram_filename.png)
+**_[XCorp's Red Team Network Diagram]_(Images/diagram_filename.png)
 
 The following files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the following files that may be used to install only certain pieces of it, such as Filebeat.
 
 All the files below are located under /etc/ansible.
 
-***[Hosts]
-***[Ansible.cfg]
-***[Pentest.yml]
-***[Install_elk.yml]
+**_[Hosts]_
+
+**_[Ansible.cfg]_
+
+**_[Pentest.yml]_
+
+**_[Install_elk.yml]_
+
 ***[Filebeat.yml]
 ***[Filebeat-config.yml]
 
