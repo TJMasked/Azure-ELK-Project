@@ -152,7 +152,7 @@ _Answer the following questions to fill in the blanks:_
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
 **Filebeat Playbook Download**
-...
+'''
 ---
   - name: installing and launching filebeat
     hosts: webservers
@@ -183,14 +183,14 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
       systemd:
         name: filebeat
         enabled: yes
-...
+'''
 
 _More info can be found under Kibana/home/Add data/System logs.  See below screenshot._
 
 [Kibana - Filebeat System logs Setup]
 
 **Metricbeat Playbook Download**
-...
+'''
 ---
   - name: installing and launching metricbeat
     hosts: webservers
@@ -221,7 +221,7 @@ _More info can be found under Kibana/home/Add data/System logs.  See below scree
       systemd:
         name: metricbeat
         enabled: yes
-...
+'''
 
 _More info can be found under Kibana/home/Add data/System metrics.  See below screenshot._
 
