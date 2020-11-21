@@ -152,6 +152,7 @@ _Answer the following questions to fill in the blanks:_
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
 **Filebeat Playbook Download**
+
 '''
 ---
   - name: installing and launching filebeat
@@ -190,6 +191,7 @@ _More info can be found under Kibana/home/Add data/System logs.  See below scree
 [Kibana - Filebeat System logs Setup]
 
 **Metricbeat Playbook Download**
+
 '''
 ---
   - name: installing and launching metricbeat
