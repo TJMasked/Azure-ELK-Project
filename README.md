@@ -8,16 +8,17 @@ The following files have been tested and used to generate a live ELK deployment 
 
 All the files below are located under /etc/ansible.
 
-**_[Hosts]_
+**_[Hosts]_**
 
-**_[Ansible.cfg]_
+**_[Ansible.cfg]_**
 
-**_[Pentest.yml]_
+**_[Pentest.yml]_**
 
-**_[Install_elk.yml]_
+**_[Install_elk.yml]_**
 
-**[Filebeat.yml]_
-***[Filebeat-config.yml]
+**_[Filebeat.yml]_**
+
+**_[Filebeat-config.yml]_**
 
 This document contains the following details:
 - Description of the Topologu
