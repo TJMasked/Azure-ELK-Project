@@ -8,11 +8,11 @@ The following files have been tested and used to generate a live ELK deployment 
 
 All the files below are located under /etc/ansible.
 
-**_[Hosts]_**
+[Hosts](YAML/hosts)
 
-**_[Ansible.cfg]_**
+[Ansible.cfg](YAML/ansible-cfg.yml)
 
-**_[Pentest.yml]_**
+[Pentest.yml](YAML/pentest.yml)
 
 **_[Install_elk.yml]_**
 
