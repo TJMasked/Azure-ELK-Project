@@ -6,7 +6,7 @@
 
 The following files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the following files that may be used to install only certain pieces of it, such as Filebeat.
 
-All the files below are located under /etc/ansible.
+All the files below are located under /etc/ansible/*
 
 [Hosts](YAML/hosts)
 
@@ -14,15 +14,15 @@ All the files below are located under /etc/ansible.
 
 [Pentest.yml](YAML/pentest.yml)
 
-**_[Install_elk.yml]_**
+[Install_elk.yml](YAML/install_elk.yml)
 
-**_[Filebeat-install.yml]_**
+[Filebeat-install.yml](YAML/filebeat.yml)
 
-**_[Filebeat-config.yml]_**
+[Filebeat-config.yml](YAML/filebeat-config.yml)
 
-**_[Metricbeat-install.yml]_**
+[Metricbeat-install.yml](YAML/metricbeat-install.yml)
 
-**_[Metricbeat-config.yml]_**
+[Metricbeat-config.yml](YAML/metricbeat-config.yml.yml)
 
 This document contains the following details:
 - Description of the Topologu
@@ -104,7 +104,8 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-**_['docker ps output']_**(Images/docker_ps_output.png)
+[docker ps output](Images/dockerpsoutput.png)
+[Ping Test](Images/Ansibleping.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -147,7 +148,7 @@ _Answer the following questions to fill in the blanks:_
 **_ELKServer_External_IP:5601/app/kibana_**
 **_In this example, we have used http://104.215.249.163:5601/app/kibana#/home_**
 
-**_Kibana Screenshot_**
+[Kibana Screenshot](Images/Filebeat&Metricbeat.png)
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
@@ -189,7 +190,7 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 
 _More info can be found under Kibana/home/Add data/System logs.  See below screenshot._
 
-[Kibana - Filebeat System logs Setup]
+[Kibana - Filebeat System logs Setup](Images/KibanaFilebeat Setup.png)
 
 ***Metricbeat Playbook Download***
 
@@ -228,4 +229,4 @@ _More info can be found under Kibana/home/Add data/System logs.  See below scree
 
 _More info can be found under Kibana/home/Add data/System metrics.  See below screenshot._
 
-[Kibana - Metricbeat System metrics Setup]
+[Kibana - Metricbeat System metrics Setup](Images/KibanaMetricbeat Setup.png)
