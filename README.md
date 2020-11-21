@@ -2,7 +2,7 @@
 
 *The files in this repository were used to configure the network depicted below.*
 
-**_[XCorp's Red Team Network Diagram]_**(Images/XCorp's%20Red%20Team.png)
+[XCorp's Red Team Network Diagram](Images/XCorp's Red Team.png)
 
 The following files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the following files that may be used to install only certain pieces of it, such as Filebeat.
 
