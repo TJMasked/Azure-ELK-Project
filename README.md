@@ -104,8 +104,8 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-[docker ps output](Images/dockerpsoutput.png)
-[Ping Test](Images/Ansibleping.png)
+![docker ps output](Images/dockerpsoutput.png)
+![Ping Test](Images/Ansibleping.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -148,7 +148,7 @@ _Answer the following questions to fill in the blanks:_
 **_ELKServer_External_IP:5601/app/kibana_**
 **_In this example, we have used http://104.215.249.163:5601/app/kibana#/home_**
 
-[Kibana Screenshot](Images/Filebeat&Metricbeat.png)
+![Kibana Screenshot](Images/Filebeat&Metricbeat.png)
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
@@ -190,7 +190,7 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 
 _More info can be found under Kibana/home/Add data/System logs.  See below screenshot._
 
-[Kibana - Filebeat System logs Setup](Images/KibanaFilebeat Setup.png)
+![Kibana - Filebeat System logs Setup](Images/KibanaFilebeat Setup.png)
 
 ***Metricbeat Playbook Download***
 
@@ -229,4 +229,4 @@ _More info can be found under Kibana/home/Add data/System logs.  See below scree
 
 _More info can be found under Kibana/home/Add data/System metrics.  See below screenshot._
 
-[Kibana - Metricbeat System metrics Setup](Images/KibanaMetricbeat Setup.png)
+![Kibana - Metricbeat System metrics Setup](Images/KibanaMetricbeat Setup.png)
