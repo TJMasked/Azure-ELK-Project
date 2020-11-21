@@ -39,21 +39,21 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly *available*, in addition to restricting *traffic* to the network.
 
-  ***What aspect of security do load balancers protect?
+  ***What aspect of security do load balancers protect?***
   
   Load balancers protects the availability of data by re-routing network traffic to other available servers if one becomes unavailable due to attacks such as DDoS  
 
-  ***What is the advantage of a jump box?
+  ***What is the advantage of a jump box?***
   
   A jumb box is can either be a physical or virtual device which is highly secured and only used for administrative task, such as "remoting" into production servers, running of   scripts/mass software updates across, other automations, etc.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the *network data* and system *logs*.
 
-  ***What does Filebeat watch for? 
+  ***What does Filebeat watch for?*** 
   
   Filebeat collects data from specific file system from specific locations and forwards them to Elasticsearch or Logstash.
 
-   ***What does Metricbeat record?
+   ***What does Metricbeat record?***
    
    Metricbeat records machine metrics and statistics.
 
@@ -125,7 +125,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 #### For Filebeat
 SSH into the control node and follow the steps below:
 - Copy the filebeat-install.yml file to /etc/ansible/roles
-- Update the filebeat-install.yml file to include the VMs from the hosts file
+- Update the filebeat-install.yml file to include the VMs (Web-1 and Web-2) from the hosts file
 - Run the playbook, and navigate to **_ELKServer_External_IP:5601/app/kibana_** on the web browser to check that the installation worked as expected.
 
 #### For Metricbeat
@@ -137,12 +137,92 @@ SSH into the control node and follow the steps below:
 
 _Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
-**All .yml files are the playbook.  *-install.yml files are copied to /etc/ansible/roles**
+**All *.yml files are the playbook.  *-install.yml files are copied to /etc/ansible/roles**
 ***-config.yml files are copied to /etc/ansible/files**
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 **The hosts file needs to be updated to include the VMs for the playbook to run successfully.  The ELK Server is also specified in that location.  See above hosts file as an example.**
 
 - _Which URL do you navigate to in order to check that the ELK server is running?
+**_ELKServer_External_IP:5601/app/kibana_**
+**_In this example, we have used http://104.215.249.163:5601/app/kibana#/home_**
+
+**_Kibana Screenshot_**
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+**Filebeat Playbook Download**
+...
+---
+  - name: installing and launching filebeat
+    hosts: webservers
+    become: yes
+    tasks:
+
+    - name: download filebeat deb
+      command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+
+    - name: install filebeat deb
+      command: dpkg -i filebeat-7.6.1-amd64.deb
+
+    - name: drop in filebeat.yml
+      copy:
+        src: /etc/ansible/files/filebeat-config.yml
+        dest: /etc/filebeat/filebeat.yml
+
+    - name: enable and configure system module
+      command: filebeat modules enable system
+
+    - name: setup filebeat
+      command: filebeat setup
+
+    - name: start filebeat service
+      command: service filebeat start
+
+    - name: enable filebeat service
+      systemd:
+        name: filebeat
+        enabled: yes
+...
+
+_More info can be found under Kibana/home/Add data/System logs.  See below screenshot._
+
+[Kibana - Filebeat System logs Setup]
+
+**Metricbeat Playbook Download**
+...
+---
+  - name: installing and launching metricbeat
+    hosts: webservers
+    become: yes
+    tasks:
+
+    - name: download metricbeat deb
+      command: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
+
+    - name: install metricbeat deb
+      command: dpkg -i metricbeat-7.6.1-amd64.deb
+
+    - name: drop in metricbeat.yml
+      copy:
+        src: /etc/ansible/files/metricbeat-config.yml
+        dest: /etc/metricbeat/metricbeat.yml
+
+    - name: enable and configure system module
+      command: metricbeat modules enable docker
+
+    - name: setup metricbeat
+      command: metricbeat setup
+
+    - name: start metricbeat service
+      command: service metricbeat start
+
+    - name: Enable metricbeat service
+      systemd:
+        name: metricbeat
+        enabled: yes
+...
+
+_More info can be found under Kibana/home/Add data/System metrics.  See below screenshot._
+
+[Kibana - Metricbeat System metrics Setup]
