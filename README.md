@@ -190,7 +190,7 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 
 _More info can be found under Kibana/home/Add data/System logs.  See below screenshot._
 
-![Kibana - Filebeat System logs Setup](Images/KibanaFilebeat Setup.png)
+![Kibana - Filebeat System logs Setup](Images/KibanaFilebeatSetup.png)
 
 ***Metricbeat Playbook Download***
 
@@ -229,4 +229,4 @@ _More info can be found under Kibana/home/Add data/System logs.  See below scree
 
 _More info can be found under Kibana/home/Add data/System metrics.  See below screenshot._
 
-![Kibana - Metricbeat System metrics Setup](Images/KibanaMetricbeat Setup.png)
+![Kibana - Metricbeat System metrics Setup](Images/KibanaMetricbeatSetup.png)
