@@ -45,7 +45,7 @@ Load balancing ensures that the application will be highly *available*, in addit
 
   ***What is the advantage of a jump box?***
   
-  A jumb box is can either be a physical or virtual device which is highly secured and only used for administrative task, such as "remoting" into production servers, running of   scripts/mass software updates across, other automations, etc.
+  A jumb box can either be a physical or virtual device which is highly secured and only used for administrative task, such as "remoting" into production servers, running of   scripts/mass software updates across, other automations, etc.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the *network data* and system *logs*.
 
