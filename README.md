@@ -89,7 +89,7 @@ A summary of the access policies in place can be found in the table below.
 | Jump-Box-Provisioner   |      Yes             | Workstation Public IP via SSH port 22 |
 | Web-1                  |      No              | 10.0.0.4 on SSH  22                   |
 | Web-2                  |      No              | 10.0.0.4 on SSH  22                   |
-| ELKServer              |      No              | Workstation Public IP on  HTTP 80     | 
+| ELKServer               |      No              | Workstation Public IP on  HTTP 80     | 
 
 ### Elk Configuration
 
