@@ -84,11 +84,11 @@ _Which machine did you allow to access your ELK VM? What was its IP address?_
 
 A summary of the access policies in place can be found in the table below.
 
-| Name                  | | Publicly Accessible  | Allowed IP Addresses                  |
-|------------------------|----------------------|---------------------------------------|
-| Jump-Box-Provisioner   |      Yes             | Workstation Public IP via SSH port 22 |
-| Web-1                  |      No              | 10.0.0.4 on SSH  22                   |
-| Web-2                  |      No              | 10.0.0.4 on SSH  22                   |
+| Name                  |  | Publicly Accessible  | Allowed IP Addresses                  |
+|------------------------|--|----------------------|---------------------------------------|
+| Jump-Box-Provisioner   | |     Yes             | Workstation Public IP via SSH port 22 |
+| Web-1                  | |     No              | 10.0.0.4 on SSH  22                   |
+| Web-2                  | |    No              | 10.0.0.4 on SSH  22                   |
 | ELKServer           sakbckj    | |      No              | Workstation Public IP on  HTTP 80     | 
 
 ### Elk Configuration
